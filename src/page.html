@@ -11,94 +11,74 @@ header{display:flex;justify-content:space-between;align-items:center}
 .date{text-align:right;font-weight:900;font-size:30px;line-height:1;color:#c2255c}
 .date small{display:block;font-size:14px;color:#5f3dc4;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-top:4px}
 .bar{height:7px;border-radius:4px;margin-top:8px;background:linear-gradient(90deg,#e03131,#f76707,#f59f00,#2f9e44,#1c7ed6,#7048e8,#c2255c)}
-.card{border-radius:12px;padding:12px 15px 14px;background:var(--t);border:3px solid var(--c);display:grid;grid-template-columns:1fr auto;column-gap:10px;align-content:start}
-.kick{display:inline-block;font-weight:900;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:var(--c);padding:3px 10px;border-radius:20px}
-.card .kick{grid-column:1;grid-row:1;justify-self:start;align-self:center}
-.card h2{grid-column:1/3;font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.08;margin-top:7px;color:var(--d)}
-.card p{grid-column:1/3;font-size:17px;line-height:1.33;margin-top:7px;color:#2b2240}
-.big{grid-column:2;grid-row:1;display:flex;align-items:baseline;gap:6px;font-weight:900;color:var(--c);line-height:1}
-.big b{font-size:32px}
-.big i{font-style:normal;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5c5670}
-.lead{margin-top:10px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;border-radius:14px;padding:14px 18px;color:#fff;
-  background:linear-gradient(120deg,#087f5b,#1971c2 60%,#5f3dc4)}
-.lead .ic{font-size:70px;line-height:1}
+.kick{display:inline-block;font-weight:900;font-size:14px;letter-spacing:1.5px;text-transform:uppercase;padding:3px 11px;border-radius:20px}
+.lead{margin-top:12px;border-radius:16px;padding:16px 20px 18px;color:#fff;background:linear-gradient(120deg,#087f5b,#1971c2 60%,#5f3dc4)}
+.lead .top{display:flex;gap:18px;align-items:center}
+.lead .ic{font-size:84px;line-height:1}
 .lead .kick{background:#ffe066;color:#1b1530}
-.lead h1{font-family:Georgia,"Times New Roman",serif;font-size:33px;line-height:1.05;margin-top:5px}
-.lead p{font-size:16px;line-height:1.32;margin-top:6px;color:#e7f5ff}
-.lead .num{text-align:center;background:rgba(255,255,255,.16);border-radius:12px;padding:10px 12px;font-weight:900}
-.lead .num b{display:block;font-size:34px;color:#ffe066}
-.lead .num i{font-style:normal;font-size:12px;letter-spacing:1px;text-transform:uppercase}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:11px}
-.card .ic{font-size:30px;margin-right:6px;vertical-align:-6px}
-.red{--c:#e03131;--t:#fff0f0;--d:#a61e4d}.blu{--c:#1971c2;--t:#e7f5ff;--d:#1864ab}.ora{--c:#e8590c;--t:#fff4e6;--d:#d9480f}
-.tea{--c:#0c8599;--t:#e3fafc;--d:#0b7285}.ind{--c:#7048e8;--t:#f3f0ff;--d:#5f3dc4}.grn{--c:#2f9e44;--t:#ebfbee;--d:#2b8a3e}
-footer{margin-top:10px;display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:13px;color:#5f3dc4}
-footer span.r{display:flex;gap:6px}
-footer span.r em{font-style:normal;color:#fff;padding:3px 10px;border-radius:20px;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.lead h1{font-family:Georgia,"Times New Roman",serif;font-size:44px;line-height:1.04;margin-top:6px}
+.lead .body{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:12px}
+.lead p{font-size:19px;line-height:1.36;color:#eef6ff}
+.lead q{font-style:italic;color:#ffe066}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.stats div{background:rgba(255,255,255,.16);border-radius:12px;padding:8px 10px;text-align:center;font-weight:800;font-size:13px;letter-spacing:.5px;text-transform:uppercase}
+.stats b{display:block;font-size:30px;color:#ffe066;letter-spacing:0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.card{border-radius:16px;padding:14px 17px 16px;background:var(--t);border:4px solid var(--c)}
+.card .kick{background:var(--c);color:#fff}
+.card .hd{display:flex;justify-content:space-between;align-items:center}
+.card .hd span.ic{font-size:44px;line-height:1}
+.card h2{font-family:Georgia,"Times New Roman",serif;font-size:34px;line-height:1.06;margin-top:10px;color:var(--d)}
+.card p{font-size:18.5px;line-height:1.38;margin-top:10px;color:#2b2240}
+.card .fig{margin-top:14px;display:flex;gap:8px}
+.card .fig div{flex:1;background:#fff;border:2px solid var(--c);border-radius:10px;text-align:center;padding:5px 4px;font-weight:800;font-size:11.5px;letter-spacing:.5px;text-transform:uppercase;color:#5c5670}
+.card .fig b{display:block;font-size:24px;color:var(--c);letter-spacing:0}
+.red{--c:#e03131;--t:#fff0f0;--d:#a61e4d}.ora{--c:#e8590c;--t:#fff4e6;--d:#d9480f}
+footer{margin-top:10px;display:flex;justify-content:space-between;font-weight:800;font-size:13px;color:#5f3dc4}
 </style></head>
 <body>
 <header>
   <div class="mast">The Daily Globe</div>
-  <div class="date">SATURDAY 21 NOVEMBER 2026<small>The world's news of the day</small></div>
+  <div class="date">SATURDAY 21 NOVEMBER 2026<small>Three stories that shaped the day</small></div>
 </header>
 <div class="bar"></div>
 
 <div class="lead">
-  <div class="ic">🌍</div>
-  <div>
-    <span class="kick">Climate · Antalya, Türkiye</span>
-    <h1>COP31 climate talks run into overtime with no deal</h1>
-    <p>The UN summit blows past Friday's close and talks go on through Saturday. The latest draft, the "Antalya Declaration", drops any call to move away from fossil fuels and a $120bn adaptation-finance goal. The EU says it will be "a good deal or no deal".</p>
+  <div class="top">
+    <div class="ic">🌍</div>
+    <div>
+      <span class="kick">Climate · COP31 · Antalya, Türkiye</span>
+      <h1>UN climate talks run into overtime with no deal in sight</h1>
+    </div>
   </div>
-  <div class="num"><b>0</b><i>mentions of<br>fossil fuels</i></div>
+  <div class="body">
+    <p>The COP31 summit blew past its Friday close and negotiators worked on through Saturday, split over whether the final text should even mention the fossil fuels heating the planet.</p>
+    <p>The latest draft, the "Antalya Declaration", drops any call to move away from fossil fuels and a $120bn goal for adaptation finance. <q>We are close to the finish line, but we are not there yet,</q> says COP31 president Murat Kurum.</p>
+  </div>
+  <div class="stats">
+    <div><b>0</b>mentions of fossil fuels</div>
+    <div><b>$120bn</b>adaptation goal dropped</div>
+    <div><b>+1 day</b>past the deadline</div>
+  </div>
 </div>
 
-<div class="grid">
+<div class="pair">
   <div class="card red">
-    <div class="big"><b>2</b><i>killed</i></div>
-    <span class="kick">Ukraine</span>
-    <h2><span class="ic">🚀</span>Missiles hit Zelensky's home city</h2>
-    <p>A "double-tap" ballistic strike on central Kryvyi Rih kills a child and a paramedic who came to help. A Russian drone also hits a five-storey block in the Kharkiv region, wounding 11.</p>
-  </div>
-
-  <div class="card blu">
-    <div class="big"><b>7 days</b><i>to leave</i></div>
-    <span class="kick">Denmark · Russia</span>
-    <h2><span class="ic">🕵️</span>Denmark expels Russia's attaché</h2>
-    <p>Copenhagen orders out Russia's defence attaché and halts non-essential visas for Russians, after a foiled assassination plot on Danish soil is tied to Russian intelligence.</p>
+    <div class="hd"><span class="kick">Ukraine · Russia</span><span class="ic">🚀</span></div>
+    <h2>Missiles hit Zelensky's home city</h2>
+    <p>A Russian "double-tap" ballistic strike on central Kryvyi Rih kills a 7-year-old boy and a paramedic who rushed to help, and wounds dozens.</p>
+    <p>A drone hits a five-storey block in the Kharkiv region, wounding 11, a day after strikes on Kyiv's bridges cut power across Ukraine.</p>
+    <div class="fig"><div><b>2</b>killed</div><div><b>11</b>hurt in Kharkiv</div></div>
   </div>
 
   <div class="card ora">
-    <div class="big"><b>☢️</b><i>"dirty bomb"</i></div>
-    <span class="kick">USA · Iran</span>
-    <h2><span class="ic">⚠️</span>Trump threatens Iran</h2>
-    <p>Trump warns of military action over a reported "dirty bomb" plot against Washington. Iran denies a US-Israeli strike on Qeshm Island, blaming the blasts on old munitions being destroyed.</p>
-  </div>
-
-  <div class="card tea">
-    <div class="big"><b>M6.7</b><i>magnitude</i></div>
-    <span class="kick">Peru</span>
-    <h2><span class="ic">🌋</span>Strong quake shakes central Peru</h2>
-    <p>A deep magnitude-6.7 earthquake in the Junín region is felt in Lima. A hospital in Pichanaqui is cracked, but no injuries are reported and there is no tsunami threat.</p>
-  </div>
-
-  <div class="card ind">
-    <div class="big"><b>440,000</b><i>evacuated</i></div>
-    <span class="kick">India</span>
-    <h2><span class="ic">🌀</span>Cyclone Akvan hits Odisha</h2>
-    <p>The cyclone crosses the coast near Gopalpur and weakens inland. More than 440,000 people were moved from low-lying areas to shelters before it struck.</p>
-  </div>
-
-  <div class="card grn">
-    <div class="big"><b>6</b><i>killed</i></div>
-    <span class="kick">South Africa</span>
-    <h2><span class="ic">🚨</span>Mass shooting in Worcester</h2>
-    <p>Gunmen kill six people and wound three in the Western Cape town in the early hours of Saturday. Police have launched a manhunt for the attackers.</p>
+    <div class="hd"><span class="kick">USA · Iran</span><span class="ic">☢️</span></div>
+    <h2>Trump threatens Iran over "dirty bomb"</h2>
+    <p>President Trump warns of military action over a reported Iranian "dirty bomb" plot against Washington, as tension over the US naval blockade grows.</p>
+    <p>Tehran denies that blasts on Qeshm Island were a US-Israeli strike and blames old munitions being destroyed.</p>
+    <div class="fig"><div><b>Qeshm</b>blasts denied</div><div><b>Hormuz</b>blockade row</div></div>
   </div>
 </div>
 
-<footer>
-  <span>7 stories from 6 regions · as reported by news agencies on 21 November 2026</span>
-  <span class="r"><em style="background:#1971c2">Europe</em><em style="background:#e8590c">Middle East</em><em style="background:#2f9e44">Africa</em><em style="background:#7048e8">Asia</em><em style="background:#0c8599">Americas</em></span>
-</footer>
+<footer><span>Europe · Middle East · United States · the world's climate talks</span><span>As reported by news agencies on 21 November 2026</span></footer>
 </body></html>
