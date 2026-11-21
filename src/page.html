@@ -3,119 +3,102 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1024px;height:1024px;overflow:hidden}
-body{color:#1b1530;font-family:Georgia,"Times New Roman",serif;padding:14px 22px 0;
+body{color:#1b1530;font-family:"Segoe UI",Arial,sans-serif;padding:16px 20px 0;
   background:linear-gradient(135deg,#fff4d6 0%,#ffe3ec 35%,#e3f0ff 70%,#e6ffe9 100%)}
-.ears{display:flex;justify-content:space-between;font:800 12px "Segoe UI",Arial,sans-serif;letter-spacing:1px;text-transform:uppercase}
-.ears span:first-child{color:#7048e8}.ears span:last-child{color:#0c8599}
-.mast{text-align:center;font-weight:700;font-size:70px;letter-spacing:1px;line-height:1;margin-top:2px;font-variant:small-caps;font-size:62px;
+header{display:flex;justify-content:space-between;align-items:center}
+.mast{font-family:Georgia,"Times New Roman",serif;font-weight:700;font-size:54px;line-height:1;font-variant:small-caps;letter-spacing:.5px;
   background:linear-gradient(90deg,#e03131,#f76707,#f59f00,#2f9e44,#1c7ed6,#7048e8,#c2255c);-webkit-background-clip:text;background-clip:text;color:transparent}
-.dateline{margin-top:6px;border-radius:6px;display:flex;justify-content:space-between;align-items:center;padding:5px 12px;font:800 15px "Segoe UI",Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#fff;
-  background:linear-gradient(90deg,#5f3dc4,#1971c2,#0c8599)}
-.dateline .d{color:#ffe066;font-size:19px}
-.banner{margin-top:8px;font-weight:700;font-size:47px;line-height:1.02;letter-spacing:-.5px;text-align:center;color:#087f5b}
-.deck{text-align:center;font-style:italic;font-size:19px;color:#5c2d91;margin-top:4px;padding-bottom:7px;border-bottom:3px solid #20c997}
-.row{display:grid;grid-template-columns:600px 1fr;gap:16px;margin-top:9px}
-figure{border-radius:8px;background:linear-gradient(135deg,#ffd8a8,#fcc2d7);padding:6px}
-figure svg{display:block;width:100%;height:auto;border-radius:5px}
-figcaption{font:700 12.5px "Segoe UI",Arial,sans-serif;color:#862e9c;margin-top:4px;line-height:1.25}
-.side h2{font-size:25px;line-height:1.05;font-weight:700;color:var(--c)}
-.side .blk{--c:#c92a2a;background:#fff0f0;border-left:6px solid var(--c);border-radius:6px;padding:6px 9px}
-.side .blk+.blk{--c:#1864ab;background:#e7f5ff;margin-top:8px}
-.kicker{font:900 12px "Segoe UI",Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:var(--c);display:block;margin-bottom:2px}
-.side p{font-size:15px;line-height:1.3;margin-top:5px;text-align:justify}
-.side .blk:first-child p::first-letter{float:left;font-size:44px;line-height:.9;font-weight:700;margin:3px 5px 0 0;color:#c92a2a}
-.n{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:var(--c,#c92a2a);color:#fff;font:800 11.5px "Segoe UI",Arial,sans-serif;vertical-align:2px;margin-right:4px}
-.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:9px}
-.story{padding:6px 10px 7px;border-radius:7px;border-top:6px solid var(--c);background:var(--t)}
-.story h3{font-size:20px;line-height:1.08;font-weight:700;color:#1b1530}
-.story p{font-size:14.5px;line-height:1.28;margin-top:4px;color:#3b2f4a}
-.brief{border-radius:7px;margin-top:9px;padding:7px 10px;display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:5px 12px;font:600 14.5px "Segoe UI",Arial,sans-serif;align-items:center;color:#fff;
-  background:linear-gradient(90deg,#862e9c,#c2255c,#e8590c)}
-.brief b.h{grid-row:1/3;grid-column:1;font:900 13px "Segoe UI",Arial,sans-serif;letter-spacing:2px;writing-mode:vertical-rl;transform:rotate(180deg);color:#ffe066}
-.brief .n{background:#fff;color:var(--c)}
-.legend{margin-top:9px;display:flex;justify-content:center;gap:8px;font:800 13px "Segoe UI",Arial,sans-serif;letter-spacing:1px;text-transform:uppercase}
-.legend span{padding:4px 11px;border-radius:20px;color:#1b1530;border:2px solid #1b1530}
-.red{--c:#e03131;--t:#ffe3e3}.ora{--c:#e8590c;--t:#fff0e0}.yel{--c:#e67700;--t:#fff9db}.grn{--c:#2b8a3e;--t:#ebfbee}
-.tea{--c:#0c8599;--t:#e3fafc}.blu{--c:#1971c2;--t:#e7f5ff}.ind{--c:#5f3dc4;--t:#f3f0ff}.pin{--c:#c2255c;--t:#fff0f6}
+.date{text-align:right;font-weight:900;font-size:30px;line-height:1;color:#c2255c}
+.date small{display:block;font-size:14px;color:#5f3dc4;font-weight:800;letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+.bar{height:7px;border-radius:4px;margin-top:8px;background:linear-gradient(90deg,#e03131,#f76707,#f59f00,#2f9e44,#1c7ed6,#7048e8,#c2255c)}
+.card{border-radius:12px;padding:12px 15px 14px;background:var(--t);border:3px solid var(--c);display:grid;grid-template-columns:1fr auto;column-gap:10px;align-content:start}
+.kick{display:inline-block;font-weight:900;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:#fff;background:var(--c);padding:3px 10px;border-radius:20px}
+.card .kick{grid-column:1;grid-row:1;justify-self:start;align-self:center}
+.card h2{grid-column:1/3;font-family:Georgia,"Times New Roman",serif;font-size:27px;line-height:1.08;margin-top:7px;color:var(--d)}
+.card p{grid-column:1/3;font-size:17px;line-height:1.33;margin-top:7px;color:#2b2240}
+.big{grid-column:2;grid-row:1;display:flex;align-items:baseline;gap:6px;font-weight:900;color:var(--c);line-height:1}
+.big b{font-size:32px}
+.big i{font-style:normal;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:#5c5670}
+.lead{margin-top:10px;display:grid;grid-template-columns:auto 1fr auto;gap:16px;align-items:center;border-radius:14px;padding:14px 18px;color:#fff;
+  background:linear-gradient(120deg,#087f5b,#1971c2 60%,#5f3dc4)}
+.lead .ic{font-size:70px;line-height:1}
+.lead .kick{background:#ffe066;color:#1b1530}
+.lead h1{font-family:Georgia,"Times New Roman",serif;font-size:33px;line-height:1.05;margin-top:5px}
+.lead p{font-size:16px;line-height:1.32;margin-top:6px;color:#e7f5ff}
+.lead .num{text-align:center;background:rgba(255,255,255,.16);border-radius:12px;padding:10px 12px;font-weight:900}
+.lead .num b{display:block;font-size:34px;color:#ffe066}
+.lead .num i{font-style:normal;font-size:12px;letter-spacing:1px;text-transform:uppercase}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:11px}
+.card .ic{font-size:30px;margin-right:6px;vertical-align:-6px}
+.red{--c:#e03131;--t:#fff0f0;--d:#a61e4d}.blu{--c:#1971c2;--t:#e7f5ff;--d:#1864ab}.ora{--c:#e8590c;--t:#fff4e6;--d:#d9480f}
+.tea{--c:#0c8599;--t:#e3fafc;--d:#0b7285}.ind{--c:#7048e8;--t:#f3f0ff;--d:#5f3dc4}.grn{--c:#2f9e44;--t:#ebfbee;--d:#2b8a3e}
+footer{margin-top:10px;display:flex;justify-content:space-between;align-items:center;font-weight:800;font-size:13px;color:#5f3dc4}
+footer span.r{display:flex;gap:6px}
+footer span.r em{font-style:normal;color:#fff;padding:3px 10px;border-radius:20px;font-size:12px;letter-spacing:1px;text-transform:uppercase}
 </style></head>
 <body>
-<div class="ears"><span>World edition · No. 325</span><span>Events of the day, as reported by news agencies</span></div>
-<div class="mast">The Daily Globe</div>
-<div class="dateline"><span>Vol. 2026</span><span class="d">Saturday, 21 November 2026</span><span>17 stories · 6 regions</span></div>
+<header>
+  <div class="mast">The Daily Globe</div>
+  <div class="date">SATURDAY 21 NOVEMBER 2026<small>The world's news of the day</small></div>
+</header>
+<div class="bar"></div>
 
-<div class="banner">CLIMATE TALKS GO INTO OVERTIME</div>
-<div class="deck"><span class="n" style="--c:#087f5b">1</span>COP31 in Antalya misses its deadline; the draft deal drops fossil fuels and a $120bn adaptation goal</div>
+<div class="lead">
+  <div class="ic">🌍</div>
+  <div>
+    <span class="kick">Climate · Antalya, Türkiye</span>
+    <h1>COP31 climate talks run into overtime with no deal</h1>
+    <p>The UN summit blows past Friday's close and talks go on through Saturday. The latest draft, the "Antalya Declaration", drops any call to move away from fossil fuels and a $120bn adaptation-finance goal. The EU says it will be "a good deal or no deal".</p>
+  </div>
+  <div class="num"><b>0</b><i>mentions of<br>fossil fuels</i></div>
+</div>
 
-<div class="row">
-  <figure>
-    <svg id="map" viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg"></svg>
-    <figcaption>THE DAY ON THE MAP — numbered pins mark each story on this page, from Washington and Lima to Nairobi, Cape Town and Tokyo.</figcaption>
-  </figure>
-  <div class="side">
-    <div class="blk">
-      <span class="kicker"><span class="n">2</span>Ukraine</span>
-      <h2>Russian missiles strike Zelensky's home city</h2>
-      <p>A "double-tap" ballistic strike on central Kryvyi Rih kills a child and a paramedic and wounds dozens, as a drone hits a five-storey block in the Kharkiv region.</p>
-    </div>
-    <div class="blk">
-      <span class="kicker"><span class="n">3</span>Denmark</span>
-      <h2>Copenhagen expels Russia's defence attaché</h2>
-      <p>Non-essential visas for Russians halted after a foiled assassination plot is tied to Moscow's spies.</p>
-    </div>
+<div class="grid">
+  <div class="card red">
+    <div class="big"><b>2</b><i>killed</i></div>
+    <span class="kick">Ukraine</span>
+    <h2><span class="ic">🚀</span>Missiles hit Zelensky's home city</h2>
+    <p>A "double-tap" ballistic strike on central Kryvyi Rih kills a child and a paramedic who came to help. A Russian drone also hits a five-storey block in the Kharkiv region, wounding 11.</p>
+  </div>
+
+  <div class="card blu">
+    <div class="big"><b>7 days</b><i>to leave</i></div>
+    <span class="kick">Denmark · Russia</span>
+    <h2><span class="ic">🕵️</span>Denmark expels Russia's attaché</h2>
+    <p>Copenhagen orders out Russia's defence attaché and halts non-essential visas for Russians, after a foiled assassination plot on Danish soil is tied to Russian intelligence.</p>
+  </div>
+
+  <div class="card ora">
+    <div class="big"><b>☢️</b><i>"dirty bomb"</i></div>
+    <span class="kick">USA · Iran</span>
+    <h2><span class="ic">⚠️</span>Trump threatens Iran</h2>
+    <p>Trump warns of military action over a reported "dirty bomb" plot against Washington. Iran denies a US-Israeli strike on Qeshm Island, blaming the blasts on old munitions being destroyed.</p>
+  </div>
+
+  <div class="card tea">
+    <div class="big"><b>M6.7</b><i>magnitude</i></div>
+    <span class="kick">Peru</span>
+    <h2><span class="ic">🌋</span>Strong quake shakes central Peru</h2>
+    <p>A deep magnitude-6.7 earthquake in the Junín region is felt in Lima. A hospital in Pichanaqui is cracked, but no injuries are reported and there is no tsunami threat.</p>
+  </div>
+
+  <div class="card ind">
+    <div class="big"><b>440,000</b><i>evacuated</i></div>
+    <span class="kick">India</span>
+    <h2><span class="ic">🌀</span>Cyclone Akvan hits Odisha</h2>
+    <p>The cyclone crosses the coast near Gopalpur and weakens inland. More than 440,000 people were moved from low-lying areas to shelters before it struck.</p>
+  </div>
+
+  <div class="card grn">
+    <div class="big"><b>6</b><i>killed</i></div>
+    <span class="kick">South Africa</span>
+    <h2><span class="ic">🚨</span>Mass shooting in Worcester</h2>
+    <p>Gunmen kill six people and wound three in the Western Cape town in the early hours of Saturday. Police have launched a manhunt for the attackers.</p>
   </div>
 </div>
 
-<div class="cols">
-  <div class="story blu"><span class="kicker"><span class="n">4</span>USA · Iran</span><h3>Trump threatens Iran over "dirty bomb" claim</h3><p>Warns of military action over a reported plot against Washington.</p></div>
-  <div class="story tea"><span class="kicker"><span class="n">5</span>Peru</span><h3>M6.7 quake shakes central Peru</h3><p>Felt in Lima; a hospital is cracked, no injuries reported.</p></div>
-  <div class="story ind"><span class="kicker"><span class="n">6</span>India</span><h3>Cyclone Akvan weakens over Odisha</h3><p>More than 440,000 people were moved to safety.</p></div>
-  <div class="story grn"><span class="kicker"><span class="n">7</span>South Africa</span><h3>Gunmen kill six in Worcester</h3><p>Police launch a manhunt after a night-time shooting.</p></div>
-</div>
-
-<div class="cols">
-  <div class="story yel"><span class="kicker"><span class="n">14</span>Kenya</span><h3>Marathon champion Jepchirchir banned</h3><p>Three-year ban after a positive test for EPO.</p></div>
-  <div class="story pin"><span class="kicker"><span class="n">15</span>India</span><h3>Toxic liquor kills 11 in Manipur</h3><p>More than 300 people taken to hospital.</p></div>
-  <div class="story ora"><span class="kicker"><span class="n">16</span>Japan</span><h3>Tokyo to buy 8m barrels of Saudi oil</h3><p>Crude for Japan's national reserves.</p></div>
-  <div class="story red"><span class="kicker"><span class="n">17</span>Markets</span><h3>AI stock rout hits Latin America</h3><p>Chile's peso sinks to its weakest since 2022.</p></div>
-</div>
-
-<div class="brief">
-  <b class="h">IN BRIEF</b>
-  <span class="ora"><span class="n">8</span>Houthi missiles fired at Saudi Jazan intercepted</span>
-  <span class="red"><span class="n">9</span>Basra power-station fire kills 4 in Iraq</span>
-  <span class="grn"><span class="n">10</span>Migrant boat capsizes off Senegal; 4 dead</span>
-  <span class="ind"><span class="n">11</span>Beijing tells Japan to fix its Taiwan remarks</span>
-  <span class="blu"><span class="n">12</span>Verstappen on pole for Las Vegas Grand Prix</span>
-  <span class="tea"><span class="n">13</span>Qatar pledges €15bn more for Germany</span>
-</div>
-
-<div class="legend">
-  <span style="background:#74c0fc">Europe</span><span style="background:#ffa94d">Africa</span><span style="background:#ffd43b">Asia · Middle East</span><span style="background:#69db7c">North America</span><span style="background:#a9e34b">South America</span><span style="background:#f783ac">Oceania</span>
-</div>
-
-<script>
-const land = [
- ['#69db7c',[[-168,66],[-140,70],[-95,72],[-80,62],[-62,58],[-55,50],[-66,44],[-76,35],[-81,25],[-90,29],[-97,26],[-97,18],[-87,15],[-80,8],[-92,14],[-105,20],[-117,32],[-124,40],[-125,49],[-135,58],[-152,58],[-165,61]]],
- ['#e9ecef',[[-55,60],[-43,60],[-22,70],[-20,81],[-60,83],[-73,77]]],
- ['#a9e34b',[[-80,9],[-61,11],[-50,0],[-35,-6],[-40,-22],[-48,-28],[-58,-38],[-66,-55],[-74,-50],[-72,-30],[-71,-18],[-81,-5]]],
- ['#74c0fc',[[-10,36],[-9,43],[-2,44],[-4,48],[1,50],[8,54],[6,58],[11,64],[20,70],[31,70],[41,67],[46,60],[41,46],[29,41],[26,38],[21,40],[16,38],[12,44],[4,43]]],
- ['#74c0fc',[[-6,50],[2,51],[0,54],[-3,58.5],[-6,57],[-5,54]]],
- ['#ffa94d',[[-17,21],[-17,14],[-8,5],[5,4],[9,4],[12,-5],[13,-17],[18,-34],[26,-34],[35,-25],[40,-15],[40,-3],[51,11],[43,12],[33,28],[32,31],[20,32],[10,37],[-6,36],[-10,30]]],
- ['#ffd43b',[[29,41],[41,46],[46,60],[41,67],[60,70],[80,73],[110,77],[140,72],[170,70],[180,66],[160,60],[140,55],[135,45],[128,38],[122,30],[118,22],[108,20],[105,10],[100,13],[98,8],[95,16],[90,22],[80,15],[77,8],[72,20],[66,25],[57,26],[52,25],[56,18],[44,12],[35,28],[35,36]]],
- ['#ffd43b',[[130,31],[141,36],[142,43],[145,44],[140,40],[135,34]]],
- ['#f783ac',[[114,-22],[122,-17],[131,-12],[137,-12],[142,-11],[146,-19],[153,-27],[150,-37],[140,-38],[131,-31],[115,-34]]],
- ['#f783ac',[[95,5],[105,-6],[115,-8],[120,-2],[110,2],[100,2]]]
-];
-const pins = [[1,30.7,36.9,'#087f5b'],[2,33.4,47.9,'#c92a2a'],[3,12.6,55.7,'#1864ab'],[4,-77,38.9,'#1971c2'],[5,-75.3,-11.5,'#0c8599'],[6,84.8,19.3,'#5f3dc4'],[7,19.4,-33.6,'#2b8a3e'],[8,42.6,16.9,'#e8590c'],[9,47.8,30.5,'#e03131'],[10,-17.4,14.7,'#2b8a3e'],[11,116.4,39.9,'#5f3dc4'],[12,-115.2,36.2,'#1971c2'],[13,51.5,25.3,'#0c8599'],[14,36.8,-1.3,'#e67700'],[15,93.9,24.8,'#c2255c'],[16,139.7,35.7,'#e8590c'],[17,-70.6,-33.4,'#e03131']];
-const P = (lon, lat) => `${(lon + 180).toFixed(1)},${(80 - lat).toFixed(1)}`;
-let s = '<defs><linearGradient id="sea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4dabf7"/><stop offset="1" stop-color="#1864ab"/></linearGradient></defs><rect width="360" height="150" fill="url(#sea)"/>';
-for (let x = 0; x <= 360; x += 30) s += `<line x1="${x}" y1="0" x2="${x}" y2="150" stroke="#a5d8ff" stroke-width=".4" opacity=".6"/>`;
-for (let y = 0; y <= 150; y += 30) s += `<line x1="0" y1="${y}" x2="360" y2="${y}" stroke="#a5d8ff" stroke-width=".4" opacity=".6"/>`;
-for (const [fill, poly] of land) s += `<polygon points="${poly.map(([a, b]) => P(a, b)).join(' ')}" fill="${fill}" stroke="#1b1530" stroke-width=".6" stroke-linejoin="round"/>`;
-for (const [n, lon, lat, c] of pins) {
-  const [x, y] = P(lon, lat).split(',').map(Number);
-  s += `<circle cx="${x}" cy="${y}" r="5.4" fill="${c}" stroke="#fff" stroke-width="1.1"/><text x="${x}" y="${y + 2.4}" font-family="Segoe UI,Arial" font-weight="800" font-size="6.6" fill="#fff" text-anchor="middle">${n}</text>`;
-}
-document.getElementById('map').innerHTML = s;
-</script>
+<footer>
+  <span>7 stories from 6 regions · as reported by news agencies on 21 November 2026</span>
+  <span class="r"><em style="background:#1971c2">Europe</em><em style="background:#e8590c">Middle East</em><em style="background:#2f9e44">Africa</em><em style="background:#7048e8">Asia</em><em style="background:#0c8599">Americas</em></span>
+</footer>
 </body></html>
