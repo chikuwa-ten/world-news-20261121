@@ -3,93 +3,105 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1024px;height:1024px;overflow:hidden}
-body{background:#f3eee4;font-family:"Segoe UI",Arial,sans-serif;color:#151515;padding:18px 20px}
-header{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:5px solid #151515;padding-bottom:6px}
-h1{font-family:Georgia,"Times New Roman",serif;font-size:44px;letter-spacing:-1px;line-height:1}
-h1 small{display:block;font-family:"Segoe UI",Arial,sans-serif;font-size:15px;letter-spacing:0;font-weight:600;color:#555;margin-top:3px}
-.date{text-align:right;font-weight:900;font-size:34px;line-height:1;color:#b3121b}
-.date small{display:block;font-size:15px;color:#151515;font-weight:700;margin-top:3px}
-.lead{margin-top:10px;display:flex;gap:14px;background:#151515;color:#fff;border-radius:9px;padding:11px 16px;align-items:center}
-.lead .ic{font-size:58px;line-height:1}
-.lead h2{font-size:27px;line-height:1.08}
-.lead p{font-size:16px;margin-top:4px;color:#e6dfd2}
-.grid{margin-top:10px;display:grid;grid-template-columns:1fr 1fr;gap:9px}
-.reg{background:#fff;border-radius:9px;border-top:7px solid var(--c);padding:7px 12px 8px}
-.reg h4{font-size:14px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;color:var(--c);margin-bottom:3px}
-.reg li{list-style:none;display:flex;gap:7px;align-items:flex-start;font-size:16px;line-height:1.18;padding:2px 0;border-top:1px solid #eee}
-.reg li:first-of-type{border-top:0}
-.reg li i{font-style:normal;font-size:17px;width:22px;flex:none;text-align:center}
-.reg li b{font-weight:800}
-.band{margin-top:9px;background:#151515;color:#fff;border-radius:9px;padding:8px 14px;display:grid;grid-template-columns:1fr 1fr;gap:3px 16px;font-size:15px;line-height:1.25}
-.band h4{grid-column:1/3;color:#ffd43b;letter-spacing:2px;font-size:13px}
-.band b{font-weight:800}
-footer{margin-top:7px;font-size:12.5px;color:#555;display:flex;justify-content:space-between}
+body{background:#f2ecdf;color:#16130f;font-family:Georgia,"Times New Roman",serif;padding:16px 22px 0;
+  background-image:radial-gradient(rgba(0,0,0,.035) 1px,transparent 1px);background-size:4px 4px}
+.ears{display:flex;justify-content:space-between;font:700 12px "Segoe UI",Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;color:#5c5346}
+.mast{text-align:center;font-weight:700;font-size:70px;letter-spacing:1px;line-height:1;margin-top:2px;font-variant:small-caps}
+.mast span{color:#a3141c}
+.dateline{margin-top:6px;border-top:3px double #16130f;border-bottom:3px double #16130f;display:flex;justify-content:space-between;align-items:center;padding:4px 2px;font:800 15px "Segoe UI",Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase}
+.dateline .d{color:#a3141c;font-size:19px}
+.banner{margin-top:8px;font-weight:700;font-size:47px;line-height:1.02;letter-spacing:-.5px;text-align:center}
+.deck{text-align:center;font-style:italic;font-size:19px;color:#3b342b;margin-top:4px;padding-bottom:7px;border-bottom:1px solid #16130f}
+.row{display:grid;grid-template-columns:600px 1fr;gap:16px;margin-top:9px}
+figure{border:1px solid #16130f;background:#e9e1cf;padding:6px}
+figure svg{display:block;width:100%;height:auto;background:#cfe0e6}
+figcaption{font:600 12.5px "Segoe UI",Arial,sans-serif;color:#3b342b;margin-top:4px;line-height:1.25}
+.side h2{font-size:25px;line-height:1.05;font-weight:700}
+.side .kicker,.story .kicker{font:900 12px "Segoe UI",Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;color:#a3141c;display:block;margin-bottom:2px}
+.side p{font-size:15.5px;line-height:1.3;margin-top:5px;text-align:justify;hyphens:auto}
+.side p:first-of-type::first-letter{float:left;font-size:46px;line-height:.9;font-weight:700;margin:3px 5px 0 0}
+.side hr,.rule{border:0;border-top:1px solid #16130f;margin:8px 0}
+.n{display:inline-flex;align-items:center;justify-content:center;width:19px;height:19px;border-radius:50%;background:#a3141c;color:#fff;font:800 11.5px "Segoe UI",Arial,sans-serif;vertical-align:2px;margin-right:4px}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);margin-top:9px;border-top:3px solid #16130f}
+.story{padding:7px 11px 7px;border-right:1px solid #16130f}
+.story:first-child{padding-left:0}.story:last-child{border-right:0;padding-right:0}
+.story h3{font-size:22px;line-height:1.08;font-weight:700}
+.story p{font-size:15.5px;line-height:1.28;margin-top:4px;color:#2b261f}
+.cols+.cols{border-top:1px solid #16130f}
+.brief{border-top:3px double #16130f;border-bottom:3px double #16130f;margin-top:2px;padding:6px 0;display:grid;grid-template-columns:auto 1fr 1fr 1fr;gap:5px 12px;font:600 14.5px "Segoe UI",Arial,sans-serif;align-items:center}
+.brief b.h{grid-row:1/3;grid-column:1;font:900 13px "Segoe UI",Arial,sans-serif;letter-spacing:2px;writing-mode:vertical-rl;transform:rotate(180deg);color:#a3141c}
 </style></head>
 <body>
-<header>
-  <h1>The World on 21 November 2026<small>Saturday's news from every region, on one page</small></h1>
-  <div class="date">SAT 21 NOV<br>2026<small>29 stories · 6 regions</small></div>
-</header>
+<div class="ears"><span>World edition · No. 325</span><span>Events of the day, as reported by news agencies</span></div>
+<div class="mast">The Daily <span>Globe</span></div>
+<div class="dateline"><span>Vol. 2026</span><span class="d">Saturday, 21 November 2026</span><span>17 stories · 6 regions</span></div>
 
-<div class="lead">
-  <div class="ic">🌍</div>
-  <div>
-    <h2>COP31 climate summit in Antalya runs into overtime</h2>
-    <p>Talks go past Friday's close with no deal: the draft "Antalya Declaration" drops the shift away from fossil fuels and a $120bn adaptation goal.</p>
+<div class="banner">CLIMATE TALKS GO INTO OVERTIME</div>
+<div class="deck"><span class="n">1</span>COP31 in Antalya misses its deadline; the draft deal drops fossil fuels and a $120bn adaptation goal</div>
+
+<div class="row">
+  <figure>
+    <svg id="map" viewBox="0 0 360 150" xmlns="http://www.w3.org/2000/svg"></svg>
+    <figcaption>THE DAY ON THE MAP — numbered pins mark each story on this page, from Washington and Lima to Nairobi, Cape Town and Tokyo.</figcaption>
+  </figure>
+  <div class="side">
+    <span class="kicker"><span class="n">2</span>Ukraine</span>
+    <h2>Russian missiles strike Zelensky's home city</h2>
+    <p>A "double-tap" ballistic strike on central Kryvyi Rih kills a child and a paramedic and wounds dozens, as a drone hits a five-storey block in the Kharkiv region.</p>
+    <hr>
+    <span class="kicker"><span class="n">3</span>Denmark</span>
+    <h2>Copenhagen expels Russia's defence attaché</h2>
+    <p>Non-essential visas for Russians halted after a foiled assassination plot is tied to Moscow's spies.</p>
   </div>
 </div>
 
-<div class="grid">
-  <div class="reg" style="--c:#c92a2a"><h4>Russia · Ukraine</h4><ul>
-    <li><i>🚀</i><span><b>Double-tap missile strike on Kryvyi Rih</b> kills a child and a paramedic; dozens hurt</span></li>
-    <li><i>🏢</i><span><b>Drone hits apartment block</b> in Kharkiv region, 11 wounded</span></li>
-    <li><i>🕵️</i><span><b>Denmark expels Russia's defence attaché</b>, halts non-essential visas</span></li>
-    <li><i>🗺️</i><span><b>Europe rejects a "Yalta 2.0"</b> deal on Ukraine after Trump meets Putin and Xi</span></li>
-  </ul></div>
-
-  <div class="reg" style="--c:#1864ab"><h4>Europe</h4><ul>
-    <li><i>🛂</i><span><b>Five EU states plan to send migrants to Rwanda</b>; legality questioned</span></li>
-    <li><i>🤝</i><span><b>Qatar pledges €15bn more for Germany</b>; Merz seeks wider partnership</span></li>
-    <li><i>✈️</i><span><b>Lufthansa to cut 1,000 jobs</b> at Frankfurt and Munich</span></li>
-    <li><i>💻</i><span><b>Austria's foreign ministry website hacked</b>; staff details exposed</span></li>
-  </ul></div>
-
-  <div class="reg" style="--c:#e67700"><h4>Middle East</h4><ul>
-    <li><i>☢️</i><span><b>Trump threatens Iran</b> over a reported "dirty bomb" plot on Washington</span></li>
-    <li><i>💥</i><span><b>Iran denies US-Israeli strike on Qeshm</b>, blames munitions disposal</span></li>
-    <li><i>🛡️</i><span><b>Saudi coalition intercepts Houthi missiles</b> fired at Jazan</span></li>
-    <li><i>🔥</i><span><b>Fire at Basra power station</b> kills 4, injures 35 in Iraq</span></li>
-  </ul></div>
-
-  <div class="reg" style="--c:#2b8a3e"><h4>Africa</h4><ul>
-    <li><i>🚨</i><span><b>Gunmen kill six in Worcester</b>, South Africa; manhunt launched</span></li>
-    <li><i>🚤</i><span><b>Migrant boat capsizes off Senegal</b>; four bodies recovered</span></li>
-    <li><i>🏃</i><span><b>Marathon champion Jepchirchir banned</b> three years for EPO</span></li>
-    <li><i>🕯️</i><span><b>South Africa mourns Mlambo-Ngcuka</b>, its first woman deputy president</span></li>
-  </ul></div>
-
-  <div class="reg" style="--c:#862e9c"><h4>Asia · Pacific</h4><ul>
-    <li><i>🌀</i><span><b>Cyclone Akvan weakens over Odisha</b>; 440,000 moved to safety</span></li>
-    <li><i>🗾</i><span><b>Beijing tells Japan to fix Taiwan remarks</b> after snubbing PM Takaichi</span></li>
-    <li><i>🛢️</i><span><b>Japan to buy 8m barrels of Saudi crude</b> for its reserves</span></li>
-    <li><i>☠️</i><span><b>Toxic liquor kills 11 in Manipur</b>, India; 300 in hospital</span></li>
-  </ul></div>
-
-  <div class="reg" style="--c:#0b7285"><h4>Americas</h4><ul>
-    <li><i>🌋</i><span><b>M6.7 quake shakes central Peru</b>, felt in Lima; hospital cracked</span></li>
-    <li><i>📉</i><span><b>AI stock rout hits Latin America</b>: Chile's peso at weakest since 2022</span></li>
-    <li><i>🏛️</i><span><b>US Senate blocks Iran war-powers resolution</b></span></li>
-    <li><i>🏎️</i><span><b>Verstappen on pole</b> for Saturday night's Las Vegas Grand Prix</span></li>
-  </ul></div>
+<div class="cols">
+  <div class="story"><span class="kicker"><span class="n">4</span>USA · Iran</span><h3>Trump threatens Iran over "dirty bomb" claim</h3><p>Warns of military action over a reported plot against Washington.</p></div>
+  <div class="story"><span class="kicker"><span class="n">5</span>Peru</span><h3>M6.7 quake shakes central Peru</h3><p>Felt in Lima; a hospital is cracked, no injuries reported.</p></div>
+  <div class="story"><span class="kicker"><span class="n">6</span>India</span><h3>Cyclone Akvan weakens over Odisha</h3><p>More than 440,000 people were moved to safety.</p></div>
+  <div class="story"><span class="kicker"><span class="n">7</span>South Africa</span><h3>Gunmen kill six in Worcester</h3><p>Police launch a manhunt after a night-time shooting.</p></div>
 </div>
 
-<div class="band">
-  <h4>SCIENCE · HEALTH · SPORT</h4>
-  <span>🧬 <b>Pancreatic cancer drug</b> shrinks tumours in 61% of trial patients</span>
-  <span>🎾 <b>ATP Finals semis</b> in Turin: Alcaraz v Shelton, Zverev v Medvedev</span>
-  <span>🏏 <b>Rahul 136</b>: India reach 486/4 against New Zealand in Wellington</span>
-  <span>🛰️ <b>BepiColombo</b> closes in on orbit around Mercury</span>
+<div class="cols">
+  <div class="story"><span class="kicker"><span class="n">14</span>Kenya</span><h3>Marathon champion Jepchirchir banned</h3><p>Three-year ban after a positive test for EPO.</p></div>
+  <div class="story"><span class="kicker"><span class="n">15</span>India</span><h3>Toxic liquor kills 11 in Manipur</h3><p>More than 300 people taken to hospital.</p></div>
+  <div class="story"><span class="kicker"><span class="n">16</span>Japan</span><h3>Tokyo to buy 8m barrels of Saudi oil</h3><p>Crude for Japan's national reserves.</p></div>
+  <div class="story"><span class="kicker"><span class="n">17</span>Markets</span><h3>AI stock rout hits Latin America</h3><p>Chile's peso sinks to its weakest since 2022.</p></div>
 </div>
 
-<footer><span>Events of Saturday 21 November 2026, as reported by news agencies</span><span>Europe · Middle East · Africa · Asia-Pacific · Americas</span></footer>
+<div class="brief">
+  <b class="h">IN BRIEF</b>
+  <span><span class="n">8</span>Houthi missiles fired at Saudi Jazan intercepted</span>
+  <span><span class="n">9</span>Basra power-station fire kills 4 in Iraq</span>
+  <span><span class="n">10</span>Migrant boat capsizes off Senegal; 4 dead</span>
+  <span><span class="n">11</span>Beijing tells Japan to fix its Taiwan remarks</span>
+  <span><span class="n">12</span>Verstappen on pole for Las Vegas Grand Prix</span>
+  <span><span class="n">13</span>Qatar pledges €15bn more for Germany</span>
+</div>
+
+<script>
+const land = [
+ [[-168,66],[-140,70],[-95,72],[-80,62],[-62,58],[-55,50],[-66,44],[-76,35],[-81,25],[-90,29],[-97,26],[-97,18],[-87,15],[-80,8],[-92,14],[-105,20],[-117,32],[-124,40],[-125,49],[-135,58],[-152,58],[-165,61]],
+ [[-55,60],[-43,60],[-22,70],[-20,81],[-60,83],[-73,77]],
+ [[-80,9],[-61,11],[-50,0],[-35,-6],[-40,-22],[-48,-28],[-58,-38],[-66,-55],[-74,-50],[-72,-30],[-71,-18],[-81,-5]],
+ [[-10,36],[-9,43],[-2,44],[-4,48],[1,50],[8,54],[6,58],[11,64],[20,70],[31,70],[41,67],[46,60],[41,46],[29,41],[26,38],[21,40],[16,38],[12,44],[4,43]],
+ [[-6,50],[2,51],[0,54],[-3,58.5],[-6,57],[-5,54]],
+ [[-17,21],[-17,14],[-8,5],[5,4],[9,4],[12,-5],[13,-17],[18,-34],[26,-34],[35,-25],[40,-15],[40,-3],[51,11],[43,12],[33,28],[32,31],[20,32],[10,37],[-6,36],[-10,30]],
+ [[29,41],[41,46],[46,60],[41,67],[60,70],[80,73],[110,77],[140,72],[170,70],[180,66],[160,60],[140,55],[135,45],[128,38],[122,30],[118,22],[108,20],[105,10],[100,13],[98,8],[95,16],[90,22],[80,15],[77,8],[72,20],[66,25],[57,26],[52,25],[56,18],[44,12],[35,28],[35,36]],
+ [[130,31],[141,36],[142,43],[145,44],[140,40],[135,34]],
+ [[114,-22],[122,-17],[131,-12],[137,-12],[142,-11],[146,-19],[153,-27],[150,-37],[140,-38],[131,-31],[115,-34]],
+ [[95,5],[105,-6],[115,-8],[120,-2],[110,2],[100,2]]
+];
+const pins = [[1,30.7,36.9],[2,33.4,47.9],[3,12.6,55.7],[4,-77,38.9],[5,-75.3,-11.5],[6,84.8,19.3],[7,19.4,-33.6],[8,42.6,16.9],[9,47.8,30.5],[10,-17.4,14.7],[11,116.4,39.9],[12,-115.2,36.2],[13,51.5,25.3],[14,36.8,-1.3],[15,93.9,24.8],[16,139.7,35.7],[17,-70.6,-33.4]];
+const P = (lon, lat) => `${(lon + 180).toFixed(1)},${(80 - lat).toFixed(1)}`;
+let s = '';
+for (let x = 0; x <= 360; x += 30) s += `<line x1="${x}" y1="0" x2="${x}" y2="150" stroke="#b7ccd3" stroke-width=".4"/>`;
+for (let y = 0; y <= 150; y += 30) s += `<line x1="0" y1="${y}" x2="360" y2="${y}" stroke="#b7ccd3" stroke-width=".4"/>`;
+for (const poly of land) s += `<polygon points="${poly.map(([a, b]) => P(a, b)).join(' ')}" fill="#e8dcc0" stroke="#8a7a5c" stroke-width=".6" stroke-linejoin="round"/>`;
+for (const [n, lon, lat] of pins) {
+  const [x, y] = P(lon, lat).split(',').map(Number);
+  s += `<circle cx="${x}" cy="${y}" r="5.2" fill="#a3141c" stroke="#fff" stroke-width="1"/><text x="${x}" y="${y + 2.4}" font-family="Segoe UI,Arial" font-weight="800" font-size="6.6" fill="#fff" text-anchor="middle">${n}</text>`;
+}
+document.getElementById('map').innerHTML = s;
+</script>
 </body></html>
